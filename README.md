@@ -8,3 +8,4 @@
    
 5. Make sure you understand the output of the command. Did both containers start up correctly? Could the hello-you-app call the webserver service?
 6. Try to open the webpage in your local browser
+7. Once done run: `docker-compose down`
