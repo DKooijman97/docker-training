@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  hello-you-app:
+    # BUILD THE IMAGE USING THE Dockerfile file
+    environment:
+      # INSERT YOUR NAME HERE
+      - NAME=<yourname>
+      # FIll in the correct host:port to reach the webserver container!
+      - URL=<URL webservice>
+    depends_on:
+      - webserver
+  webserver:
+    # BUILD THE IMAGE USING THE DockerfileWebapp file
+    # Make sure the webservice is available from your host port 8081. Tip: Use the files in this repo to figure out the port on the container.
+    # The hello-you-app should be able to reach this container as well
+    ports:
+      - "8081:80"
