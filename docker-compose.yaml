@@ -13,5 +13,4 @@ services:
     # BUILD THE IMAGE USING THE DockerfileWebapp file
     # Make sure the webservice is available from your host port 8081. Tip: Use the files in this repo to figure out the port on the container.
     # The hello-you-app should be able to reach this container as well
-    ports:
-      - "8081:80"
+    # Mount the ./html directory of this repo as volume to container, container path: /usr/share/nginx/html
